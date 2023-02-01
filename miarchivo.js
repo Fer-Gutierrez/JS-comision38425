@@ -48,14 +48,14 @@ function cotizar(cant) {
 
       i = i - 1;
     } else {
-      sumaVh = Number(prompt("Ingrese el precio de su vehículo"));
+      sumaVh = Number(prompt(`Ingrese el precio del vehículo ${i + 1}`));
       if (isNaN(sumaVh)) {
         alert("Debe ingresar un valor numérico. Intetelo nuevamente.");
         i = i - 1;
         continue;
       }
 
-      anioVh = parseInt(prompt("Ingrese el año de su vehículo"));
+      anioVh = parseInt(prompt(`Ingrese el año del vehículo ${i + 1}`));
       if (isNaN(anioVh)) {
         alert("Debe ingresar un valor numérico. Intetelo nuevamente.");
         i = i - 1;

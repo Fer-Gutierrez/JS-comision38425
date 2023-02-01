@@ -46,7 +46,7 @@ function cotizar(cant) {
 
       i = i - 1;
     } else {
-      sumaBien = Number(prompt("Ingrese el precio de su equipo"));
+      sumaBien = Number(prompt(`Ingrese el precio del equipo ${i + 1}`));
       if (isNaN(sumaBien)) {
         alert("Debe ingresar un valor numérico. Intetelo nuevamente.");
         i = i - 1;
