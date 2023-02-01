@@ -72,9 +72,9 @@ function cotizar(cant) {
 
 if (listaCot.length >0){
   let stringCosto = ""
-  listaCot.forEach(valor => stringCosto = `${stringCosto}\n - Vhc: ${valor.marca} ${valor.anio} SA: $ ${valor.suma} --> Costo Mensual: $ ${valor.costo}`)
+  listaCot.forEach(valor => stringCosto = `${stringCosto}\n - Vhc: ${valor.marca} ${valor.anio} SA: $ ${valor.suma} --> Costo Mensual: $ ${Math.round(valor.costo)}`)
   let costoTotal =0;
-  listaCot.forEach(valor => costoTotal+= valor.costo);
+  listaCot.forEach(valor => costoTotal+= Math.round(valor.costo));
 
   alert(`El costo mensual del seguro es: $ ${costoTotal}\nCon los siguientes vehículos:\n${stringCosto}`)
 
