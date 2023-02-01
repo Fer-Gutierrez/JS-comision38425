@@ -7,7 +7,7 @@ const listaMarcas = [
 ];
 
 const cantvehiculos = SolicitarDato();
-if (cantMovilidad !== null){
+if (cantvehiculos !== null){
   cotizar(cantvehiculos);
 }
 
@@ -76,7 +76,7 @@ if (listaCot.length >0){
   let costoTotal =0;
   listaCot.forEach(valor => costoTotal+= valor.costo);
 
-  alert(`El costo total del seguro es: $ ${costoTotal}\nCon los siguientes vehículos:\n${stringCosto}`)
+  alert(`El costo mensual del seguro es: $ ${costoTotal}\nCon los siguientes vehículos:\n${stringCosto}`)
 
 
 }else{

@@ -53,7 +53,7 @@ function cotizar(cant) {
         continue;
       }
 
-      let costoSeguro = (sumaMov * tasaMov / 1000)
+      let costoSeguro = (sumaMov * tasaMov / 1000)/ 12
 
       listaCot.push({marca: marcaMov, suma: sumaMov, costo: costoSeguro});
 
@@ -62,7 +62,7 @@ function cotizar(cant) {
 
 if (listaCot.length >0){
   let stringCosto = ""
-  listaCot.forEach(valor => stringCosto = `${stringCosto}\n - Mov: ${valor.marca} SA: $ ${valor.suma} --> Costo: $ ${valor.costo}`)
+  listaCot.forEach(valor => stringCosto = `${stringCosto}\n - Mov: ${valor.marca} SA: $ ${valor.suma} --> Costo Mensual: $ ${valor.costo}`)
   let costoTotal =0;
   listaCot.forEach(valor => costoTotal+= valor.costo);
 

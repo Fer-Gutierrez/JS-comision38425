@@ -31,7 +31,7 @@ function cotizar(cant) {
   const listaCot = new Array(0);
 
   for (let i = 0; i < cant; i++) {
-    let bien = prompt(`Ingrese la familiar del equipo electrónico ${i + 1}`);
+    let bien = prompt(`Ingrese la familia del equipo electrónico ${i + 1}`);
     let sumaBien;
     let tasaBien = validarMarca(bien);
     if (isNaN(tasaBien)) {
@@ -53,7 +53,7 @@ function cotizar(cant) {
         continue;
       }
 
-      let costoSeguro = (sumaBien * tasaBien / 1000)
+      let costoSeguro = (sumaBien * tasaBien / 1000)/ 12
 
       listaCot.push({tipoBien: bien, suma: sumaBien, costo: costoSeguro});
 
@@ -62,7 +62,7 @@ function cotizar(cant) {
 
 if (listaCot.length >0){
   let stringCosto = ""
-  listaCot.forEach(valor => stringCosto = `${stringCosto}\n - Equipo: ${valor.tipoBien} SA: $ ${valor.suma} --> Costo: $ ${valor.costo}`)
+  listaCot.forEach(valor => stringCosto = `${stringCosto}\n - Equipo: ${valor.tipoBien} SA: $ ${valor.suma} --> Costo Mensual: $ ${valor.costo}`)
   let costoTotal =0;
   listaCot.forEach(valor => costoTotal+= valor.costo);
 
